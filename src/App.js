@@ -1,14 +1,13 @@
-import React from 'react'
-import CharacterGallery from './components/CharacterGallery'
-import './App.css'
-
-const App = () => {
+import logo from './logo.svg';
+import './App.css';
+import CharacterGallery from './components/CharacterGallery';
+import characters from "./data/characterData.json"
+function App() {
   return (
-    <div data-test='app-container'>
-      <h1 className="site-title" data-test='site-title'>A Song of Fire and Ice</h1>
-      <CharacterGallery />
+    <div data-test="component-app">
+     <CharacterGallery characters={characters}></CharacterGallery>
     </div>
   );
-};
+}
 
 export default App;
